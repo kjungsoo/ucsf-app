@@ -10,6 +10,12 @@ import UIKit
 
 class ViewController: UIViewController {
 
+    // MARK: properties
+
+    //@IBOutlet weak var traineeName: UITextField!
+    
+    //@IBOutlet weak var caseID: UITextField!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
@@ -19,7 +25,11 @@ class ViewController: UIViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
+    
+    // MARK: actions
 
+    //@IBAction func nextButton(sender: AnyObject) {
+    //}
 
 }
 
