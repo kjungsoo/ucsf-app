@@ -12,13 +12,14 @@ class ViewController: UIViewController {
 
     // MARK: properties
 
-    //@IBOutlet weak var traineeName: UITextField!
-    
-    //@IBOutlet weak var caseID: UITextField!
+    @IBOutlet weak var nextButton: UIButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+        nextButton.layer.cornerRadius = 5
+        nextButton.layer.borderWidth = 1
+        nextButton.layer.borderColor = UIColor.whiteColor().CGColor
     }
 
     override func didReceiveMemoryWarning() {
@@ -27,9 +28,6 @@ class ViewController: UIViewController {
     }
     
     // MARK: actions
-
-    //@IBAction func nextButton(sender: AnyObject) {
-    //}
 
 }
 
