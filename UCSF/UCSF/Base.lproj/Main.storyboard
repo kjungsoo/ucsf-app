@@ -4,6 +4,7 @@
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
@@ -19,7 +20,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <textField clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Trainee Name" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="py7-c2-ben">
-                                <rect key="frame" x="200" y="253" width="200" height="30"/>
+                                <rect key="frame" x="200" y="259.5" width="200" height="30"/>
                                 <color key="backgroundColor" red="0.46666666666666667" green="0.68627450980392157" blue="0.84705882352941175" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="200" id="t99-eo-xIK"/>
@@ -29,17 +30,17 @@
                                 <textInputTraits key="textInputTraits" autocapitalizationType="words"/>
                             </textField>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Case ID" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="A2Y-Sy-pWH">
-                                <rect key="frame" x="200" y="309" width="200" height="30"/>
+                                <rect key="frame" x="200" y="315.5" width="200" height="30"/>
                                 <color key="backgroundColor" red="0.46666666666666667" green="0.68627450980392157" blue="0.84705882352941175" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="200" id="meF-oW-bx2"/>
                                 </constraints>
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
+                                <textInputTraits key="textInputTraits"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bnE-Mw-Hnq">
-                                <rect key="frame" x="200" y="445" width="200" height="30"/>
+                                <rect key="frame" x="200" y="451.5" width="200" height="30"/>
                                 <color key="backgroundColor" red="0.46666666666666667" green="0.68627450980392157" blue="0.84705882352941175" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="200" id="gKo-DE-kk8"/>
@@ -51,19 +52,26 @@
                                 </state>
                             </button>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Hospital" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="5T5-u8-cBH">
-                                <rect key="frame" x="200.5" y="365" width="200" height="30"/>
+                                <rect key="frame" x="200" y="371.5" width="200" height="30"/>
                                 <color key="backgroundColor" red="0.46666666666666667" green="0.68627450980392157" blue="0.84705882352941175" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="200" id="uu4-5R-eOn"/>
                                 </constraints>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="UCSF_sig_white_RGB" translatesAutoresizingMaskIntoConstraints="NO" id="hhx-Wn-yLC" userLabel="Logo">
-                                <rect key="frame" x="213" y="90" width="175" height="114"/>
+                                <rect key="frame" x="200.5" y="80" width="200" height="130.5"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="175" id="7v6-UX-bEH"/>
+                                    <constraint firstAttribute="width" constant="200" id="7v6-UX-bEH"/>
                                     <constraint firstAttribute="width" secondItem="hhx-Wn-yLC" secondAttribute="height" multiplier="446:290" id="JiF-P8-vim"/>
+                                </constraints>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="skyline" translatesAutoresizingMaskIntoConstraints="NO" id="N9B-vO-E9u">
+                                <rect key="frame" x="0.0" y="451.5" width="600" height="148.5"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="N9B-vO-E9u" secondAttribute="height" multiplier="1900:470" id="egu-SV-FoS"/>
                                 </constraints>
                             </imageView>
                         </subviews>
@@ -74,13 +82,19 @@
                             <constraint firstItem="5T5-u8-cBH" firstAttribute="top" secondItem="A2Y-Sy-pWH" secondAttribute="bottom" constant="26" id="3h9-1c-aNL"/>
                             <constraint firstItem="py7-c2-ben" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="DYz-97-cKh"/>
                             <constraint firstItem="py7-c2-ben" firstAttribute="top" secondItem="hhx-Wn-yLC" secondAttribute="bottom" constant="49" id="KQ6-BC-Yij"/>
-                            <constraint firstItem="hhx-Wn-yLC" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" constant="90" id="LyR-VJ-Bpb"/>
+                            <constraint firstItem="hhx-Wn-yLC" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" constant="80" id="LyR-VJ-Bpb"/>
                             <constraint firstItem="5T5-u8-cBH" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="TzM-BS-VUR"/>
                             <constraint firstItem="hhx-Wn-yLC" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="dbq-xO-cUM"/>
                             <constraint firstItem="A2Y-Sy-pWH" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="g6B-JL-VTk"/>
+                            <constraint firstItem="N9B-vO-E9u" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="hXh-3s-cBa"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="N9B-vO-E9u" secondAttribute="bottom" id="j0E-NZ-bjP"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="N9B-vO-E9u" secondAttribute="trailing" id="o2X-7L-OwV"/>
+                            <constraint firstItem="N9B-vO-E9u" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="oTE-B4-V2b"/>
                             <constraint firstItem="A2Y-Sy-pWH" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="oo5-Jp-859"/>
                             <constraint firstItem="A2Y-Sy-pWH" firstAttribute="top" secondItem="py7-c2-ben" secondAttribute="bottom" constant="26" id="peP-LO-dEZ"/>
+                            <constraint firstAttribute="trailing" secondItem="N9B-vO-E9u" secondAttribute="trailing" id="qRp-t2-wdE"/>
                             <constraint firstItem="py7-c2-ben" firstAttribute="top" secondItem="hhx-Wn-yLC" secondAttribute="bottom" constant="78" id="wBO-F7-qKR"/>
+                            <constraint firstItem="N9B-vO-E9u" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="xNh-tu-u2u"/>
                             <constraint firstItem="bnE-Mw-Hnq" firstAttribute="top" secondItem="5T5-u8-cBH" secondAttribute="bottom" constant="50" id="yNt-6M-RRM"/>
                         </constraints>
                         <variation key="default">
@@ -88,20 +102,26 @@
                                 <exclude reference="2W8-bc-LmX"/>
                                 <exclude reference="wBO-F7-qKR"/>
                                 <exclude reference="g6B-JL-VTk"/>
+                                <exclude reference="o2X-7L-OwV"/>
+                                <exclude reference="oTE-B4-V2b"/>
                             </mask>
                         </variation>
                     </view>
                     <navigationItem key="navigationItem" id="XeD-Hh-bBG"/>
                     <connections>
+                        <outlet property="caseID" destination="A2Y-Sy-pWH" id="ADP-Ti-DQJ"/>
+                        <outlet property="hospital" destination="5T5-u8-cBH" id="rGa-ng-g53"/>
                         <outlet property="nextButton" destination="bnE-Mw-Hnq" id="LOK-UZ-y8z"/>
+                        <outlet property="traineeName" destination="py7-c2-ben" id="HVf-C7-S7Z"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="329" y="336"/>
+            <point key="canvasLocation" x="97" y="353"/>
         </scene>
     </scenes>
     <resources>
         <image name="UCSF_sig_white_RGB" width="446" height="290"/>
+        <image name="skyline" width="1900" height="470"/>
     </resources>
 </document>

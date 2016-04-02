@@ -13,6 +13,9 @@ class ViewController: UIViewController {
     // MARK: properties
 
     @IBOutlet weak var nextButton: UIButton!
+    @IBOutlet weak var traineeName: UITextField!
+    @IBOutlet weak var caseID: UITextField!
+    @IBOutlet weak var hospital: UITextField!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -20,6 +23,9 @@ class ViewController: UIViewController {
         nextButton.layer.cornerRadius = 5
         nextButton.layer.borderWidth = 1
         nextButton.layer.borderColor = UIColor.whiteColor().CGColor
+        traineeName.attributedPlaceholder = NSAttributedString(string: "Trainee Name", attributes: [NSForegroundColorAttributeName: UIColor.whiteColor()])
+        caseID.attributedPlaceholder = NSAttributedString(string: "Case ID", attributes: [NSForegroundColorAttributeName: UIColor.whiteColor()])
+        hospital.attributedPlaceholder = NSAttributedString(string: "Hospital", attributes: [NSForegroundColorAttributeName: UIColor.whiteColor()])
     }
 
     override func didReceiveMemoryWarning() {
