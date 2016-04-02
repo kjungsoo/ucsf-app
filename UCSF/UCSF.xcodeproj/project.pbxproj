@@ -12,6 +12,7 @@
 		9D17125F1CACAB4900F5BCE7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9D17125D1CACAB4900F5BCE7 /* Main.storyboard */; };
 		9D1712611CACAB4900F5BCE7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9D1712601CACAB4900F5BCE7 /* Assets.xcassets */; };
 		9D1712641CACAB4900F5BCE7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9D1712621CACAB4900F5BCE7 /* LaunchScreen.storyboard */; };
+		9D17126E1CAFBCB100F5BCE7 /* HomeScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D17126D1CAFBCB100F5BCE7 /* HomeScreenViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +23,7 @@
 		9D1712601CACAB4900F5BCE7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		9D1712631CACAB4900F5BCE7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		9D1712651CACAB4900F5BCE7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9D17126D1CAFBCB100F5BCE7 /* HomeScreenViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeScreenViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +58,7 @@
 			children = (
 				9D1712591CACAB4900F5BCE7 /* AppDelegate.swift */,
 				9D17125B1CACAB4900F5BCE7 /* ViewController.swift */,
+				9D17126D1CAFBCB100F5BCE7 /* HomeScreenViewController.swift */,
 				9D17125D1CACAB4900F5BCE7 /* Main.storyboard */,
 				9D1712601CACAB4900F5BCE7 /* Assets.xcassets */,
 				9D1712621CACAB4900F5BCE7 /* LaunchScreen.storyboard */,
@@ -137,6 +140,7 @@
 			files = (
 				9D17125C1CACAB4900F5BCE7 /* ViewController.swift in Sources */,
 				9D17125A1CACAB4900F5BCE7 /* AppDelegate.swift in Sources */,
+				9D17126E1CAFBCB100F5BCE7 /* HomeScreenViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -286,6 +290,7 @@
 				9D17126A1CACAB4900F5BCE7 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

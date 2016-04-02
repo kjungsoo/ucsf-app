@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10116" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10116" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="Xm5-yW-iWO">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
@@ -7,6 +7,88 @@
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
+        <!--Home Screen View Controller-->
+        <scene sceneID="H6l-cw-ern">
+            <objects>
+                <viewController id="Xm5-yW-iWO" customClass="HomeScreenViewController" customModule="UCSF" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="MBd-45-kNc"/>
+                        <viewControllerLayoutGuide type="bottom" id="bAR-83-wM2"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="aa7-Pg-zUL">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="UCSF_sig_white_RGB" translatesAutoresizingMaskIntoConstraints="NO" id="ECM-wr-9PY">
+                                <rect key="frame" x="200" y="80" width="200" height="130"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="ECM-wr-9PY" secondAttribute="height" multiplier="446:290" id="TN2-rX-Cbj"/>
+                                    <constraint firstAttribute="width" constant="200" id="sBS-Ja-9rG"/>
+                                </constraints>
+                            </imageView>
+                            <button contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wH5-HM-HFg">
+                                <rect key="frame" x="200" y="259" width="200" height="30"/>
+                                <color key="backgroundColor" red="0.46666666666666667" green="0.68627450980392157" blue="0.84705882352941175" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="200" id="yht-M9-QHy"/>
+                                </constraints>
+                                <state key="normal" title="New Form">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="BYZ-38-t0r" kind="show" id="Pp8-wl-nVN"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="l3x-hk-QNB">
+                                <rect key="frame" x="200" y="315" width="200" height="30"/>
+                                <color key="backgroundColor" red="0.46666666666666667" green="0.68627450980392157" blue="0.84705882352941175" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="200" id="8Tb-Bh-KPH"/>
+                                </constraints>
+                                <state key="normal" title="In Progress Forms">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="skyline" translatesAutoresizingMaskIntoConstraints="NO" id="bbj-Xj-PDO">
+                                <rect key="frame" x="0.0" y="451.5" width="600" height="148.5"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="bbj-Xj-PDO" secondAttribute="height" multiplier="1900:470" id="omk-da-0vU"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" red="0.0" green="0.48627450980392156" blue="0.74509803921568629" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="bbj-Xj-PDO" firstAttribute="centerX" secondItem="aa7-Pg-zUL" secondAttribute="centerX" id="4JD-1x-wbD"/>
+                            <constraint firstItem="wH5-HM-HFg" firstAttribute="centerX" secondItem="aa7-Pg-zUL" secondAttribute="centerX" id="7yU-YR-bPB"/>
+                            <constraint firstItem="ECM-wr-9PY" firstAttribute="top" secondItem="MBd-45-kNc" secondAttribute="bottom" constant="80" id="84b-74-xF3"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="bbj-Xj-PDO" secondAttribute="trailing" constant="160" id="B42-bk-hxq"/>
+                            <constraint firstItem="l3x-hk-QNB" firstAttribute="centerX" secondItem="aa7-Pg-zUL" secondAttribute="centerX" id="BD0-hW-XSy"/>
+                            <constraint firstItem="l3x-hk-QNB" firstAttribute="top" secondItem="wH5-HM-HFg" secondAttribute="bottom" constant="26" id="F3h-Ut-16c"/>
+                            <constraint firstItem="bbj-Xj-PDO" firstAttribute="leading" secondItem="aa7-Pg-zUL" secondAttribute="leading" id="ICK-hZ-jUS"/>
+                            <constraint firstItem="ECM-wr-9PY" firstAttribute="top" secondItem="MBd-45-kNc" secondAttribute="bottom" constant="80" id="MPh-u9-lx8"/>
+                            <constraint firstItem="bAR-83-wM2" firstAttribute="top" secondItem="bbj-Xj-PDO" secondAttribute="bottom" id="Nan-OJ-UGl"/>
+                            <constraint firstItem="wH5-HM-HFg" firstAttribute="top" secondItem="ECM-wr-9PY" secondAttribute="bottom" constant="49" id="a4W-zh-wgt"/>
+                            <constraint firstItem="ECM-wr-9PY" firstAttribute="centerX" secondItem="aa7-Pg-zUL" secondAttribute="centerX" id="htR-F5-aef"/>
+                            <constraint firstItem="ECM-wr-9PY" firstAttribute="top" secondItem="aa7-Pg-zUL" secondAttribute="top" constant="80" id="iO1-WO-tQ0"/>
+                            <constraint firstAttribute="trailing" secondItem="bbj-Xj-PDO" secondAttribute="trailing" id="loO-W0-1JB"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="84b-74-xF3"/>
+                                <exclude reference="MPh-u9-lx8"/>
+                                <exclude reference="B42-bk-hxq"/>
+                            </mask>
+                        </variation>
+                    </view>
+                    <connections>
+                        <outlet property="progressForms" destination="l3x-hk-QNB" id="Qy4-Vm-KyQ"/>
+                        <outlet property="startForm" destination="wH5-HM-HFg" id="ppt-3g-HlP"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="FuE-U7-FZw" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-326" y="161"/>
+        </scene>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
@@ -117,7 +199,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="97" y="353"/>
+            <point key="canvasLocation" x="426" y="161"/>
         </scene>
     </scenes>
     <resources>
