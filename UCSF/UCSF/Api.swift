@@ -8,6 +8,47 @@
 
 import Foundation
 
+//how to integrate this into app???
+
+let url = NSBundle.mainBundle().URLForResource("data", withExtension: "json")
+let data = NSData(contentsOfURL: url!)
+
+func test() {
+    do {
+        let object = try NSJSONSerialization.JSONObjectWithData(data!, options: .AllowFragments)
+        if let dictionary = object as? [String: AnyObject] {
+            readJSONobject(dictionary)
+        }
+    } catch {
+        print("error") //create actual exception handling
+    }
+}
+
+func readJSONobject(object: [String: AnyObject]) { //very incomplete parsing function for JSON object, but it works
+    guard let sessionID = object["FormSessionID"] as? String else { return }
+    print ("Form Session ID: \(sessionID)")
+}
+
+/*
+ concerns
+ test cases: nonstop
+             nonstop but with backtracking "fixing errors"
+             with stop
+             with stop and backtracking
+             transaction id???
+             scrap current log and restart
+
+ concern: submitting log and creating new one, uses GET? not sure
+          checkForSessionChanges, how does this work
+ 
+first time filling form generates FormRuntime object, every other time FormRuntime is null
+ 
+ transaction id: 
+        +2 every page
+        +1 every refresh
+        *checkForSessionChanges +0
+*/
+
 //JSON POST DATA - WITHOUT STOPPING
 /* PG 1 - NAME ENTRY PAGE
 
@@ -64,3 +105,12 @@ INPUT: TECHNICAL PROFICIENCY - NA
 PG 6 END
 */
 
+//JSON POST DATA - SECOND TEST
+
+/* PG 1 - NAME ENTRY PAGE
+ 
+ INPUT: NAME - SECOND TEST
+        ID - 9999
+        HOSPITAL - SFGH (1)
+ */
+ 
